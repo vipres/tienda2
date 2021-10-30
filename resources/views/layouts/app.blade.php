@@ -16,6 +16,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/207406b752.js" crossorigin="anonymous"></script>
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
@@ -39,6 +41,11 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                         {{--    <i class="fas fa-shopping-cart"></i>
+                        {{ \Cart::session(auth()->id())->getContent()->count() }} --}}
+                            @livewire('shop.cart-component')
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
