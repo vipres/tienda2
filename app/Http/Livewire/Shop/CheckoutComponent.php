@@ -61,8 +61,22 @@ class CheckoutComponent extends Component
 
         $order->payment_method = $this->payment_method;
         $order->total = \Cart::session(auth()->id())->getTotal();
-/*
-//Despues de saber el metodo de pago
-$order->is_paid */
+        $order->save();
+
+        $cartItems = \Cart::session(auth()->id())->getContent();
+        foreach($cartItems as $key => $item)
+        {
+            $order->items()->attach($item->id, [
+                'price' => $item->price,
+                'quantity' => $item->quantity
+            ]);
+        }
+
+        if($this->payment_method == 'paypal'){
+
+        }else{
+           // $order->is_paid;
+            //Esta en false por defecto (ver migracion)
+        }
     }
 }
