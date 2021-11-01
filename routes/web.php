@@ -3,6 +3,7 @@
 use App\Http\Livewire\Shop\Cart\IndexComponent as CartIndexComponent;
 use App\Http\Livewire\Shop\CheckoutComponent;
 use App\Http\Livewire\Shop\IndexComponent;
+use App\PaypalCheckout;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/cart', CartIndexComponent::class)->name('cart');
 Route::get('/checkout', CheckoutComponent::class)->name('checkout');
+Route::get('/paypal-success/{order}', [PaypalCheckout::class, 'getExpressCheckoutSuccess'])->name('paypal.success');
+Route::get('/paypal-cancel', [PaypalCheckout::class, 'cancelPage'])->name('paypal.cancel');
+
+
