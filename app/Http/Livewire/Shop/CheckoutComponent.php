@@ -42,6 +42,7 @@ class CheckoutComponent extends Component
         $order->order_number = uniqid('OrderNumber-');
     //  $order->status = Por default en la migracion
         $order->item_count = \Cart::session(auth()->id())->getContent()->count();
+
         $order->shipping_fullname = $this->fullname;
         $order->shipping_address = $this->address;
         $order->shipping_city = $this->city;
@@ -66,6 +67,7 @@ class CheckoutComponent extends Component
 
         $order->payment_method = $this->payment_method;
         $order->total = \Cart::session(auth()->id())->getTotal();
+
         $order->save();
 
         $cartItems = \Cart::session(auth()->id())->getContent();

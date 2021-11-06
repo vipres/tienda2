@@ -1,0 +1,11 @@
+{
+    "default": "option1",
+    "options": {
+        "option1": "Option 1 Text",
+        "option2": "Option 2 Text"
+    }
+} {
+    "on": "Pagado",
+    "off": "No Pagado",
+    "checked": true
+}

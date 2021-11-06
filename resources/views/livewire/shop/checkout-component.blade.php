@@ -61,7 +61,7 @@
               @enderror
         </div>
         <div class="form-check">
-            <input class="form-check-input" type="radio" wire:model="payment_method" value="cash_on_deliver"  name="flexRadioDefault" id="flexRadioDefault1">
+            <input class="form-check-input" type="radio" wire:model="payment_method" value="cash_on_delivery"  name="flexRadioDefault" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
               Cash on Delivery
             </label>
