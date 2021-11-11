@@ -46,6 +46,9 @@
                         {{ \Cart::session(auth()->id())->getContent()->count() }} --}}
                             @livewire('shop.cart-component')
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register.shop') }}">{{ __('Registrar Mi Tienda') }}</a>
+                           </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))

@@ -1,11 +1,22 @@
 {
-    "default": "option1",
     "options": {
-        "option1": "Option 1 Text",
-        "option2": "Option 2 Text"
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "declined": "Declined"
     }
 } {
     "on": "Pagado",
     "off": "No Pagado",
     "checked": true
 }
+
+
+{
+    "options": {
+        "option1": "Option 1 Text",
+        "option2": "Option 2 Text"
+    }
+}
+
+php artisan iseed data_types, data_rows, categories, posts, pages, menus, menu_items, roles, users, user_roles, permissions, permission_role, settings
