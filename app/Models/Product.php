@@ -15,7 +15,14 @@ protected $fillable = [
     'description',
     'price',
     'cover_img',
+    'shop_id',
 ];
+
+public function shop()
+{
+    return $this->belongsTo(Shop::class, 'shop_id');
+}
+
 
 
 

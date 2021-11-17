@@ -35,6 +35,14 @@ class RolesTableSeeder extends Seeder
                 'created_at' => '2021-11-04 11:19:26',
                 'updated_at' => '2021-11-04 11:19:26',
             ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'seller',
+                'display_name' => 'Vendedor',
+                'created_at' => '2021-11-11 17:54:16',
+                'updated_at' => '2021-11-11 17:54:16',
+            ),
         ));
         
         

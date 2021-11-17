@@ -17,6 +17,7 @@ class ProductFactory extends Factory
             'name'=> $this->faker->sentence(2), //Con dos palabras
             'description'=> $this->faker->sentence(15), //Con 20
             'price'=> $this->faker->numberBetween(100, 2000), //Entre estos valores
+            
 
         ];
     }
